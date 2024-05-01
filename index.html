@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root=document.getElementById('root')
+    const create_root=ReactDOM.createRoot(root)
+    const string="Seize the day"
+    const display=<p>{string}</p>
+   
+    const flag=true
+    if (flag==true){
+        create_root.render(display)
+    }
+    else{
+        const display1=<p>Make the most of it</p>
+            create_root.render(display1)
+    }
+
+
+   
+  </script>
+</body>
+</html>
